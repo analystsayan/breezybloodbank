@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Login</title>
+  <link rel="stylesheet" href="style_patient_login.css">
+  <script src="https://kit.fontawesome.com/01dcb3424f.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="container">
+  <nav>
+    <ul>
+      <li><a href="landing.html">Home</a></li>
+      <!--<li><a href="patient_login.html">Patient LogIn</a></li>-->
+      <li><a href="donor_login.html">Donor LogIn</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+      <li><a href="admin_login.html">Admin LogIn</a></li>
+    </ul>
+  </nav>
+  <div class="form-box">
+    <h1 id="title0">Online Blood Bank System</h1>
+    <h2 id="title">Patient Sign Up</h2>
+    <form>
+      <div class="input-group">
+        <div class="input-field" id="nameField">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" placeholder="Name">
+        </div>
+
+        <div class="input-field">
+          <i class="fa-solid fa-id-card-clip"></i>
+          <input type="text" placeholder="UserId">
+        </div>
+
+        <div class="input-field">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" placeholder="Password">
+        </div>
+        <p>Lost Password? <a href="#">Click Here</a></p>
+      </div>
+      <div class="btn-field">
+        <button type="button" id="signupBtn">Patient Sign UP</button>
+        <button type="button" id="signinBtn" class="disable">Patient Sign In</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+
+let signupBtn = document.getElementById("signupBtn");
+let signinBtn = document.getElementById("signinBtn");
+let nameField = document.getElementById("nameField");
+let title = document.getElementById("title");
+
+signinBtn.onclick = function(){
+  nameField.style.maxHeight = "0";
+  title.innerHTML = "Patient Sign In";
+  signupBtn.classList.add("disable");
+  signinBtn.classList.remove("disable");
+}
+
+signupBtn.onclick = function(){
+  nameField.style.maxHeight = "60px";
+  title.innerHTML = "Patient Sign Up";
+  signupBtn.classList.remove("disable");
+  signinBtn.classList.add("disable");
+}
+
+</script>
+
+</body>
+</html>
